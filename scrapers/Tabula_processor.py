@@ -1,3 +1,11 @@
+import re
+import json
+import urllib.request as urllib2
+import pandas as pd
+from os import listdir
+from os.path import isfile, join
+from scripts import *
+
 def read_file(filename):
     input_file_text = open(filename, encoding='utf-8').read()
     return input_file_text
@@ -34,5 +42,7 @@ def corpus_builder(Tabula_Corpus):
 
 
 # Upload the retrieved menus from the directory
-# dir_base = r"C:\Users\andre\Tabula Menus"
-# Tabula_Corpus = read_directory_files(dir_base)
+dir_base = r"/Users/Matteo/Desktop/NLP/project/Tabula Menus"
+Tabula_Corpus = read_directory_files(dir_base)
+
+Tabula_Corpus_Cleaned = corpus_builder(Tabula_Corpus)
