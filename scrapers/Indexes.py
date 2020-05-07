@@ -11,6 +11,9 @@ from nltk.stem.porter import *
 porter_stemmer = PorterStemmer()
 from nltk import ngrams
 
+with open('Background Corpora.json', 'r') as j:
+    Background_Corpora_Json = json.load(j)
+    print(Background_Corpora_Json)
 
 def get_tokens(text):
     punkt_sentences = sentence_tokenizer.tokenize(text)
@@ -138,7 +141,7 @@ def inv_index(corpus, all_tokens):
     return term_docs
 
 
-def term_maps(all_tokens, all_ngrams):
+def term_grams(all_tokens, all_ngrams):
     grams_dic = {}
 
     for tok in all_tokens:
@@ -150,5 +153,19 @@ def term_maps(all_tokens, all_ngrams):
         grams_dic[tok] = grams
 
     return grams_dic
+
+
+def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
+    dic = {}
+    for tok in all_tokens:
+        doc_dic = {}
+        for key, value in corpus.items():
+            grams = []
+            for gram in all_ngrams:
+                if tok in gram:
+                    grams.append(gram)
+            doc_dic[key] = grams
+        dic[tok] = doc_dic
+    return dic
 
 
