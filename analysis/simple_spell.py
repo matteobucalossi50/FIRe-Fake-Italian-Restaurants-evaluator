@@ -29,13 +29,18 @@ def checker(background, test):
             continue
     return count, errors
 
-checker(words_freq.keys(), set_menu)
+result, errs = checker(words_freq.keys(), set_menu)
 
 
 
 
 
 # edit_distance
+'''
+target_word = "fire"
+possible_misspellings = [word for sentence in error_newswire for word in sentence if edit_distance(word, target_word) < 2 and edit_distance(word, target_word) > 0]
+print(possible_misspellings)
+'''
 count = 0
 for word in test_menu:
     for w in words_freq.keys():
