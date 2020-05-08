@@ -34,7 +34,7 @@ def scoring(result, doc):
 
     plt.imshow(img)
     plt.show()
-    ok = input("Got it now? (yes/no: ")
+    ok = input("Got it now? (yes/no): ")
     if ok == 'yes':
         plt.close()
 
