@@ -1,5 +1,17 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+from PIL import Image
+import subprocess
+
+# other options
+'''
+ImageViewer(img).show()
+image = Image.open('/Users/Matteo/Desktop/NLP/project/FIRe-Fake-Italian-Restaurants-evaluator/images/olive_garden.jpg')
+image.show()
+p = subprocess.Popen(["display", '/Users/Matteo/Desktop/NLP/project/FIRe-Fake-Italian-Restaurants-evaluator/images/olive_garden.jpg'])
+raw_input("Give a name for image:")
+p.kill()
+'''
 
 # label scores
 def scoring(result, doc):
@@ -22,8 +34,12 @@ def scoring(result, doc):
 
     plt.imshow(img)
     plt.show()
+    ok = input("Got it now? (yes/no: ")
+    if ok == 'yes':
+        plt.close()
 
     return scores
+
 
 scoring(result, "Test_menu")
 
