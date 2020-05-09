@@ -30,15 +30,15 @@ def get_better_sentence_bigrams(sentence):
     '''
 
 
-def estimate_sentence_probability(bigram_sentence, word_length):
+def estimate_sentence_probability(ngrams, word_count):
     slogprob = 0
-    for bigram_words in bigram_sentence:
+    for bigram_words in ngrams:
         logprob = Smoothed_dist.logprob(bigram_words)
         slogprob += logprob
 
-    return slogprob / word_length
+    return slogprob / word_count
 
-estimate_probability = estimate_sentence_probability(bigram_sentence, word_count)
+estimate_probability = estimate_sentence_probability(all_ngrams, word_count)
 print(estimate_probability)
 
 

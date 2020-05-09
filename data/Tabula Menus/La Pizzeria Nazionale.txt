@@ -1,0 +1,148 @@
+primi
+"Raviolone su crema di pomodoro, maggiorana 11,50"
+"ripieno di cacioricotta e mozzarella, su crema di pomodoro"
+e cialda di grana
+"Risotto alla rapa rossa, salsiccia e burrata 12,50"
+mantecato con burro di bufala e cialda di grana al tartufo
+"“Carbonara” ai porcini 13,50"
+"spaghetti con uova, porcini trifolati, guanciale croccante"
+e prezzemolo
+"Paccheri con tonno, olive, capperi e pistacchi 11,50"
+"tonno, pomodorini, prezzemolo"
+secondi
+"Millefoglie di pollo con nocciole e guanciale 15,00"
+petto di pollo alla brace con scottata di spinaci
+aglio e olio e nocciole
+"Tonno alla brace 22,00"
+tonno rosso con salsa ai capperi
+e sauté di broccoli baresi
+"Tagliata di manzo con grana e balsamico 22,00"
+"entrecote di manzo con sale affumicato, grana,"
+"schiacciata di patate viola e gialle,"
+ristretto di aceto balsamico e rucola
+insalatone
+"Fior di latte e prosciutto crudo 11,00"
+"fior di latte, tocchetti di prosciutto crudo di Parma"
+"in olio, melone cantalupo, pomodoro, insalata mix,"
+olive verdi e sesamo
+"Tonno e mix di pomodori 12,50"
+"filetti di tonno in olio, mix di pomodori: insalataro,"
+"ramato e ciliegino, olive nere, uovo sodo, insalata mix"
+e finocchietto
+"Salmone e avocado 13,50"
+"salmone affumicato, crema di avocado, insalata mix,"
+"riso nero di Venere, cipolla croccante, olive nere"
+e yogurt alle erbe
+"Pollo e zenzero 13,50"
+"petto di pollo alla brace, quinoa, zenzero fresco,"
+"semi di zucca, pancetta croccante, iceberg, rucola"
+e salsa Caesar
+"contorni 4,00"
+"Patate fritte*, Insalata fantasia,"
+Verdure alla brace
+bruschette con pane della casa
+"Pomodoro ramato 4,"
+basilico e aglietto
+"Burrata di Puglia 6,"
+"pomodori secchi, acciughe in olio, olive nere,"
+"capperi, origano e olio al basilico"
+"Crema di avocado e mozzarella di bufala 6,"
+"avocado, olive nere, pomodoro insalataro,"
+cipolla rossa e basilico
+fritti mar e e terra
+"Zeppoline alle erbe 6,"
+sale e pepe
+"Polpettine di melanzane e mozzarella 5,"
+"su salsa di pomodoro, grana e basilico"
+"Il fritto del sud 6,"
+mozzarella in carrozza e panzarotto sale e pepe
+"Pizzella 6,"
+due gusti:
+"pomodoro, pecorino e basilico;"
+ricotta e pesto di pistacchi
+"Calamaro marinato e panato con salsa tartara 6,"
+dalla terra ver dur e e gusti italiani
+"Mix di olive al peperoncino 3,"
+"Chips di mais dressing peperone, yogurt e pistacchio 3,"
+"Gateaux piccante 4,"
+"patate viola e gialle, salame piccante, scamorza e fonduta"
+"Zuppetta fagioli e salsiccia 5,"
+rosmarino e crostini
+"Parmigiana 7,"
+"melanzane, pomodoro, provola affumicata, basilico"
+"Bufala e Parma e melone 7,"
+dai pascoli classici sapori di latte
+"Rocher di formaggi alle erbe, pane croccante alle nocciole 3,"
+"Ricotta e Nduja di Spilinga, 4,"
+"su sabbia di pane profumato, semi di zucca"
+"Burrata e pomodori secchi 6,"
+su crumble di fresella all’origano
+e julienne di pomodori secchi
+dal mare innovative e saporite
+"Focaccia all’olio evo con mascarpone al limone, alici in olio 3,"
+"Polpo, patate e zucca 7,"
+"polpo alla brace con crema di patate e zucca, olio evo,"
+sale grosso e peperoncino
+"Tartare di tonno 8,"
+"tonno rosso agli agrumi, olio evo e julienne di finocchi"
+"Siciliana 9,5"
+"pomodoro, fior di latte, acciughe in olio, olive nere"
+e origano
+"Abruzzese 10,5"
+"Vegana: crema patate gialle, viola e zucca,"
+"funghi champignon, fiori di broccoli baresi,"
+pinoli e chips di polenta
+"Valdostana 10,5"
+"mozzarella, crema di spinaci e zucca, fontina DOP,"
+in uscita nocciole e Parma croccante
+"Calabrese 10,5"
+"provola affumicata, pizzutello giallo,"
+"‘nduja di Spilinga, finocchietto, scaglie di grana"
+e prezzemolo
+"Lombarda 11,0"
+"crema di pistacchio, in uscita stracchino,"
+mortadella DOP e limone
+"Emiliana 12,5"
+"provola affumicata e in uscita dal forno,"
+"prosciutto di Parma, rucola, cialda di grana e pistacchi tritati"
+"Pugliese 13,0"
+"burrata di Puglia, acciughe in olio, olive nere,"
+"capperi, rucola, pomodori secchi e origano"
+"Campana 13,0"
+"friarielli (broccoli napoletani), salsiccia,"
+provola affumicata e grana
+"Piemontese 13,0"
+"crema di funghi e tartufi, uova strapazzate,"
+"fior di latte, pancetta croccante, fonduta e prezzemolo"
+"Laziale 13,0"
+"“Cacio e pepe” mozzarella, pancetta croccante e prezzemolo"
+"Trentina 13,5"
+"mozzarella, tapenade di porcini e champignon"
+"trifolati. In uscita dal forno, speck IGP, crema di formaggio"
+allo zafferano e sesamo tostato
+tradizionali
+Marinara
+"pomodoro, origano, aglio e olio evo"
+Margherita
+"pomodoro, fior di latte, basilico e olio evo"
+Diavola
+"pomodoro, mozzarella e salamino piccante"
+5 Formaggi
+"mozzarella, fontina DOP, gorgonzola IGP, pecorino,"
+nocciole e grana croccante
+Capricciosa
+"pomodoro, fior di latte, champignon,"
+"prosciutto cotto, carciofini e olive nere"
+Bufalina
+"pomodorini, mozzarella di bufala DOP,"
+basilico e olio evo
+calzoni del tricolore
+ripieni con impasto sof fice
+Verde
+"ricotta, crema di spinaci, provola affumicata e pepe"
+Bianco
+"mozzarella, prosciutto cotto,"
+funghi champignon e grana
+Rosso
+"mozzarella, ricotta, salame napoli, pomodoro,"
+grana e pepe

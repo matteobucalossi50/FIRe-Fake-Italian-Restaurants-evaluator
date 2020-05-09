@@ -1,4 +1,5 @@
 import spacy
+import json
 nlp = spacy.load("it_core_news_sm")
 import nltk.data
 from nltk.tokenize import TreebankWordTokenizer
@@ -9,11 +10,16 @@ nltk.download('stopwords')
 stop_words = nltk.corpus.stopwords.words('english')
 from nltk.stem.porter import *
 porter_stemmer = PorterStemmer()
+import math
 from nltk import ngrams
 
-with open('Background Corpora.json', 'r') as j:
+with open('/Users/Matteo/Desktop/NLP/project/FIRe-Fake-Italian-Restaurants-evaluator/data/Background Corpora.json', 'r') as j:
     Background_Corpora_Json = json.load(j)
     print(Background_Corpora_Json)
+
+with open('/Users/Matteo/Desktop/NLP/project/FIRe-Fake-Italian-Restaurants-evaluator/data/Test Corpus.json', 'r') as j:
+    Test_Corpus_Json = json.load(j)
+    print(Test_Corpus_Json)
 
 def get_tokens(text):
     punkt_sentences = sentence_tokenizer.tokenize(text)
@@ -25,6 +31,7 @@ def get_tokens(text):
     #     stop_words = nltk.corpus.stopwords.words('italian')
     #     all_tokens = [w for w in all_tokens if w not in stop_words]
     return all_tokens
+
 
 
 def get_tokens_stopw(text):
@@ -53,7 +60,7 @@ def trigram(sentence):
         first_word = sentence[word]
         second_word = sentence[word + 1]
         third_word = sentence[word + 2]
-        element = [first_word, second_word, third_word]
+        element = (first_word, second_word, third_word)
         result.append(element)
 
     return result
@@ -84,6 +91,21 @@ def ngrams_it(corpus):
 
     return all_ngrams
 
+all_ngrams = ngrams_it(Background_Corpora_Json)
+
+
+def freq_grams(grams):
+    freq_grams = {}
+    for gram in grams:
+        if gram not in freq_grams.keys():
+            freq_grams[gram] = 1
+        else:
+            freq_grams[gram] += 1
+
+    # words_freq = sorted(words_freq.items(), key=lambda x:x[1], reverse=True)
+    return freq_grams
+
+fr_grams = freq_grams(all_ngrams)
 
 def tf(corpus):
     words_freq = {}
@@ -97,6 +119,9 @@ def tf(corpus):
 
     # words_freq = sorted(words_freq.items(), key=lambda x:x[1], reverse=True)
     return words_freq
+
+words_freq = tf(Background_Corpora_Json)
+
 
 def tf_doc(corpus):
     doc_terms = {}
@@ -112,6 +137,9 @@ def tf_doc(corpus):
 
     return doc_terms
 
+doc_terms = tf_doc(Background_Corpora_Json)
+
+
 def get_alltokens(corpus):
     all_tokens = []
 
@@ -124,6 +152,7 @@ def get_alltokens(corpus):
                 continue
     return all_tokens
 
+all_tokens = get_alltokens(Background_Corpora_Json)
 
 def inv_index(corpus, all_tokens):
     term_docs = {}
@@ -140,6 +169,8 @@ def inv_index(corpus, all_tokens):
 
     return term_docs
 
+term_docs = inv_index(Background_Corpora_Json, all_tokens)
+
 
 def term_grams(all_tokens, all_ngrams):
     grams_dic = {}
@@ -154,6 +185,8 @@ def term_grams(all_tokens, all_ngrams):
 
     return grams_dic
 
+grams_dic = term_grams(all_tokens, all_ngrams)
+
 
 def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
     dic = {}
@@ -167,5 +200,54 @@ def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
             doc_dic[key] = grams
         dic[tok] = doc_dic
     return dic
+
+
+##########################################################################
+####################         Analysis        #############################
+##########################################################################
+for key,value in Test_Corpus_Json.items():
+
+    all_ngrams_Test = ngrams_it(Test_Corpus_Json)
+    fr_grams_Test = freq_grams(all_ngrams_Test)
+    words_freq_Test = tf(Test_Corpus_Json)
+    doc_terms_Test = tf_doc(Test_Corpus_Json)
+    all_tokens_Test = get_alltokens(Test_Corpus_Json)
+    term_docs_Test = inv_index(Test_Corpus_Json, all_tokens_Test)
+    grams_dic_Test = term_grams(all_tokens_Test, all_ngrams_Test)
+
+
+# grams distributions
+freq_bi = nltk.FreqDist(fr_grams)
+print(freq_bi.most_common(20))
+freq_bi.plot(20)
+
+print(freq_bi.N())
+
+# grams distributions for test - just checking out
+freq_bi = nltk.FreqDist(fr_grams_Test)
+print(freq_bi.most_common(20))
+freq_bi.plot(20)
+
+print(freq_bi.N())
+
+
+# estimate prob
+Smoothed_dist = nltk.LaplaceProbDist(freq_bi)
+
+
+def estimate_sentence_probability(ngrams, word_count):
+    slogprob = 0
+    for bigram_words in ngrams:
+        logprob = Smoothed_dist.logprob(bigram_words)
+        slogprob += logprob
+
+    return slogprob / word_count
+
+
+estimate_probability = estimate_sentence_probability(all_ngrams_Test, len(all_tokens_Test))
+print(estimate_probability)
+
+
+
 
 

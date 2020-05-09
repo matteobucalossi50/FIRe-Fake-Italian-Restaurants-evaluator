@@ -1,0 +1,35 @@
+"TAGLIATA DI POLLO: Pollo alla griglia, funghi al forno pomod. fresco e scaglie di caciocavallo"
+"ALTA MAREA: Salmone affumicato, caprese di bufala, zucchine grigliate e granella di pistacchio"
+"VALLE D’ITRIA: Carpaccio di bresaola, mozzarella, pomodoro fresco, scaglie di caciocavallo"
+"TONNARA: Tonno, mozzarella, pomodoro fresco, zucchine grigliate ,cipolla al forno e basilico"
+"MERCADANTE: Melanzane, zucchine, peperoni, mozzarella, pomodoro sott’olio e basilico"
+"GARGANO: Tocchetti di prosciutto crudo o bresaola, carciofi, mozzarella, pomodoro e caciocavallo"
+"TERRA MIA: Cime di rape, capocollo di Martina, burrata, funghi al forno, pomod. sott’olio e nocciola"
+"SCOGLIERA: Burrata, melanzane, zucchine, peperoni, polpo al forno, cipolla e pistacchio"
+"Tutte le insalate sono accompagnate da una focaccina a scelta: nero di seppia, 5 cereali, semola."
+"MARGHERITA: Mozzarella, pomodoro, pepe e basilico"
+"PIZZICA: Mozzarella di bufala, salame piccante, rucola e peperoncino"
+"CAPRICCIOSA: Mozzarella, pomodoro, funghi al forno, cotto arrosto, carciofi e olive leccine"
+"MAESTRALE: Mozzarella, pomodoro, tonno, cipolla al forno, olive e basilico"
+"BARESE: Mozzarella, pomodoro, ricotta forte, crudo alla barese e rucola"
+"EGNAZIA: Mozzarella di bufala, pomodoro sott’olio, cime di rape e caciocavallo e peperoncino"
+"PUGLIESE: Burrata, capocollo di Martina, funghi al forno, granella di nocciole e pepe"
+"PARANZA: Polpo al forno, burratina, rucola e granella di pistacchi"
+ARANCINI
+"Cime di rapa, parmigiana, capocollo, polpo"
+patate riso e cozze e forestieri (speciali)
+PANZEROTTI
+"CLASSICO: Mozzarella, pomodoro, parmigiano"
+"FORTE: Mozzarella, pomod. fresco, rucola, ricotta forte"
+"RAGÙ: Mozzarella, polpette al ragù, parmigiano"
+"BUFALA: Bufala, mentuccia, pomodoro sott’olio"
+"PORCHETTA: Burratina, porchetta, granella di pistacchi"
+"MORTADELLA: Mozzarella, mortadella di cinghiale,"
+"pomodoro sott’olio, caciocavallo"
+"RAPE: Mozzarella, cime di rape, salsiccia"
+"MARTINA: Mozzarella, funghi al forno, capocollo di Mar"
+provola affumicata
+"POLPO: Burratina, polpo al forno, granella di pistacchio"
+FRITTELLE Salsa tradizionale
+"Rucola, pomodoro fresco, scaglie di caciocavallo"
+Crema di nocciole e pistacchi
