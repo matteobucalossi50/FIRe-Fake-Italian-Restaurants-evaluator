@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 from PIL import Image
 import subprocess
 
-# other options
+# other options for images
 '''
 ImageViewer(img).show()
 image = Image.open('/Users/Matteo/Desktop/NLP/project/FIRe-Fake-Italian-Restaurants-evaluator/images/olive_garden.jpg')
@@ -15,21 +15,21 @@ p.kill()
 
 # label scores
 def scoring(result, doc):
-    scores = {}
+    scores = 0
     if result <= 5:
-        scores[doc] = 5
+        scores = 5
         img = mpimg.imread('images/nonna-open.jpg')
     elif result >= 6 and result <= 10:
-        scores[doc] = 4
+        scores = 4
         img = mpimg.imread('images/Red-Sauce-Raos.jpg')
     elif result >= 11 and result <= 15:
-        scores[doc] = 3
+        scores = 3
         img = mpimg.imread('images/rosie-s-italian-grille.jpg')
     elif result >= 16 and result <= 20:
-        scores[doc] = 2
+        scores = 2
         img = mpimg.imread('images/olive_garden.jpg')
     else:
-        scores[doc] = 1
+        scores = 1
         img = mpimg.imread('images/pizza_deep.jpg')
 
     plt.imshow(img)
@@ -38,8 +38,18 @@ def scoring(result, doc):
     if ok == 'yes':
         plt.close()
 
-    return scores
+    return scores, img
 
 
-scoring(result, "Test_menu")
+#####################################################
+## to be finished
 
+df_scoring = ...
+for key, value in final_results.items():
+    score, img = scoring(value, key)
+    df_scoring = pd.DataFrame(data={'Restaurant': key, 'Score': score, 'Class': img})
+
+# add the errors column
+for key, value in final_errors.items():
+    df_scoring['Errors'] = value
+#####################################################
