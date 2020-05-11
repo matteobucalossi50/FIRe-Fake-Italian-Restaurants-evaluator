@@ -203,15 +203,15 @@ def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
 ##########################################################################
 ####################         Analysis        #############################
 ##########################################################################
-for key, value in Test_Corpus_Json.items():
-    for item in value:
-        all_ngrams_Test = ngrams_it(Test_Corpus_Json)
-        fr_grams_Test = freq_grams(all_ngrams_Test)
-        words_freq_Test = tf(Test_Corpus_Json)
-        doc_terms_Test = tf_doc(Test_Corpus_Json)
-        all_tokens_Test = get_alltokens(Test_Corpus_Json)
-        term_docs_Test = inv_index(Test_Corpus_Json, all_tokens_Test)
-        grams_dic_Test = term_grams(all_tokens_Test, all_ngrams_Test)
+# for key, value in Test_Corpus_Json.items():
+#     for item in value:
+#         all_ngrams_Test = ngrams_it(Test_Corpus_Json)
+#         fr_grams_Test = freq_grams(all_ngrams_Test)
+#         words_freq_Test = tf(Test_Corpus_Json)
+#         doc_terms_Test = tf_doc(Test_Corpus_Json)
+#         all_tokens_Test = get_alltokens(Test_Corpus_Json)
+#         term_docs_Test = inv_index(Test_Corpus_Json, all_tokens_Test)
+#         grams_dic_Test = term_grams(all_tokens_Test, all_ngrams_Test)
 
 
 # grams distributions
