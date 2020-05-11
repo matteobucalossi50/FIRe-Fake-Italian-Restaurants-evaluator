@@ -156,7 +156,6 @@ all_tokens = get_alltokens(Background_Corpora_Json)
 def inv_index(corpus, all_tokens):
     term_docs = {}
     for tok in all_tokens:
-        doc_dic = {}
         documents = []
         for key, value in corpus.items():
             tokens = get_tokens_stopw(value)
@@ -204,9 +203,8 @@ def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
 ##########################################################################
 ####################         Analysis        #############################
 ##########################################################################
-def single_test_doc(Test_Corpus_Json):
-    for key, value in Test_Corpus_Json.items():
-        for item in value:
+for key, value in Test_Corpus_Json.items():
+    for item in value:
         all_ngrams_Test = ngrams_it(Test_Corpus_Json)
         fr_grams_Test = freq_grams(all_ngrams_Test)
         words_freq_Test = tf(Test_Corpus_Json)
