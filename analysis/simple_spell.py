@@ -18,8 +18,8 @@ def background_corpus():
 
 def set_menu(Test_menu):
     set_menu = set(get_tokens_stopw(Test_menu))
-    print(set_menu)
-    print(len(set_menu))
+    # print(set_menu)
+    # print(len(set_menu))
     return set_menu
 
 

@@ -7,43 +7,32 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-
-
-#!pip install nltk
-
-#Importing the background corpus
+# Importing the background corpus
 with open('data/Background Corpora.json', 'r') as j:
         Background_Corpora_Json = json.load(j)
 
+# Get tokens dictionary
 words_freq = tf(Background_Corpora_Json)
 
-
-#Test File
+# english words to exlcude
 food_words = cooking_corpus_creator("https://www.enchantedlearning.com/wordlist/food.shtml") 
 food_verbs = cooking_corpus_creator("https://www.enchantedlearning.com/wordlist/cooking.shtml") 
 cooking_vocabulary = food_words + food_verbs
-cooking_vocabulary
+
+###test = pd.read_csv('./scrapers/Filomena.csv')
 
 
-
-
-#test = pd.read_csv('./scrapers/Filomena.csv')
-
-url = input("Enter the url to be tested")
-
+# user menu
+url = input("Enter the url to be tested: ")
 
 test_menu = get_menusII(url)
-
 test_menu = remove_english(str(test_menu), cooking_vocabulary)
-
-
-
 menu = set_menu(test_menu)
 
+# check the menu
 result, errs = checker(words_freq.keys(), menu)
-
 print("These are the errors:", errs)
-print("Result:",result)
+print("Result:", result)
 
+# get our score!
 scores = scoring(result, 1)
-
