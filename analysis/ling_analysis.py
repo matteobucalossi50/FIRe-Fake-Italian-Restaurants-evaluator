@@ -1,8 +1,5 @@
 from nltk.metrics import *
 
-
-
-
 # edit distance
 def edit_dist(dic, corr_w):
     count = 0
@@ -23,23 +20,23 @@ def get_candidates(dic, words_freq):
         if count != 0:
             missp_dic[w] = misspells
 
+'''
+## try with jaro distance
+def jaro_dist(dic, corr_w):
+    count = 0
+    misspells = []
+    for key, value in dic.items():
+        for word in value:
+            if jaro_similarity(word, corr_w) < 2 and jaro_similarity(word, corr_w) > 0:
+                misspells.append(word)
+                count += 1
+    return misspells, count
 
-# try with jaro distance
-# def jaro_dist(dic, corr_w):
-#     count = 0
-#     misspells = []
-#     for key, value in dic.items():
-#         for word in value:
-#             if jaro_similarity(word, corr_w) < 2 and jaro_similarity(word, corr_w) > 0:
-#                 misspells.append(word)
-#                 count += 1
-#     return misspells, count
-#
-# # # v expensive?
-# missp_dic = {}
-# for w in words_freq.keys():
-#     misspells, count = jaro_dist(tokens_test_s, w)
-#     missp_dic[w] = misspells
+missp_dic = {}
+for w in words_freq.keys():
+    misspells, count = jaro_dist(tokens_test_s, w)
+    missp_dic[w] = misspells
+'''
 
 
 # grams frequencies
