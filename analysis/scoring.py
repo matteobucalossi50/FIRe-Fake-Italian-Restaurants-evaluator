@@ -14,31 +14,46 @@ p.kill()
 '''
 
 # label scores
-def scoring(result, doc):
-    scores = {}
+def scoring(result):
     if result <= 5:
-        scores[doc] = 5
-        img = mpimg.imread('images/nonna-open.jpg')
+        scores = 5
+        #img = mpimg.imread('images/nonna-open.jpg')
     elif result >= 6 and result <= 10:
-        scores[doc] = 4
-        img = mpimg.imread('images/Red-Sauce-Raos.jpg')
+        scores = 4
+        #img = mpimg.imread('images/Red-Sauce-Raos.jpg')
     elif result >= 11 and result <= 15:
-        scores[doc] = 3
-        img = mpimg.imread('images/rosie-s-italian-grille.jpg')
+        scores = 3
+        #img = mpimg.imread('images/rosie-s-italian-grille.jpg')
     elif result >= 16 and result <= 20:
-        scores[doc] = 2
-        img = mpimg.imread('images/olive_garden.jpg')
+        scores = 2
+        #img = mpimg.imread('images/olive_garden.jpg')
     else:
-        scores[doc] = 1
-        img = mpimg.imread('images/pizza_deep.jpg')
+        scores = 1
+        #img = mpimg.imread('images/pizza_deep.jpg')
 
-    plt.imshow(img)
-    plt.show()
-    input("Got it now? (Press any key): ")
-    plt.close()
+    # plt.imshow(img)
+    # plt.show()
+    # input("Got it now? (Press any key): ")
+    # plt.close()
 
     return scores
 
 
 #scoring(result, "Test_menu")
 
+# #####################################################
+# ## to be finished
+#
+# df_scoring = ...  #not sure how to initialize here
+# for key, value in final_results.items():
+#     score, img = scoring(value, key)
+#     df_scoring = pd.DataFrame(data={'Restaurant': key, 'Score': score, 'Class': img})
+#
+# # add the errors column
+# for key, value in final_errors.items():
+#     df_scoring['Errors'] = value
+#
+# # add column with original text of menu
+# for key, value in Test_Corpus.items():
+#
+# #####################################################s

@@ -14,7 +14,7 @@ with open('data/Background Corpora.json', 'r') as j:
 # Get tokens dictionary
 words_freq = tf(Background_Corpora_Json)
 
-# english words to exlcude
+# english words to exclude
 food_words = cooking_corpus_creator("https://www.enchantedlearning.com/wordlist/food.shtml") 
 food_verbs = cooking_corpus_creator("https://www.enchantedlearning.com/wordlist/cooking.shtml") 
 cooking_vocabulary = food_words + food_verbs

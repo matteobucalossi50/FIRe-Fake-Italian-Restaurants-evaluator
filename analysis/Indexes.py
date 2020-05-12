@@ -8,9 +8,12 @@ from nltk.tokenize import word_tokenize
 sentence_tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 treebank_tokenizer = TreebankWordTokenizer()
 #nltk.download('stopwords')
-stop_words = nltk.corpus.stopwords.words('english')
+stop_words = nltk.corpus.stopwords.words('italian')
 from nltk.stem.porter import *
 porter_stemmer = PorterStemmer()
+from nltk import ngrams
+import json
+import math
 from nltk import ngrams
 
 
@@ -87,6 +90,17 @@ def ngrams_it(corpus):
 
     return all_ngrams
 
+def freq_grams(grams):
+    freq_grams = {}
+    for gram in grams:
+        if gram not in freq_grams.keys():
+            freq_grams[gram] = 1
+        else:
+            freq_grams[gram] += 1
+
+    # words_freq = sorted(words_freq.items(), key=lambda x:x[1], reverse=True)
+    return freq_grams
+
 
 def tf(corpus):
     words_freq = {}
@@ -131,7 +145,6 @@ def get_alltokens(corpus):
 def inv_index(corpus, all_tokens):
     term_docs = {}
     for tok in all_tokens:
-        doc_dic = {}
         documents = []
         for key, value in corpus.items():
             tokens = get_tokens_stopw(value)
