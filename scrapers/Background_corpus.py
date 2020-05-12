@@ -1,3 +1,0 @@
-
-OpenTable_Corpus = sc
-

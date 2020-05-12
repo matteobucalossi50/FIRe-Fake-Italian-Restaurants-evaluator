@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import simplejson as json
 from analysis.simple_spell import *
 from scrapers.TestCorpusScraper_editing import *
@@ -27,7 +29,7 @@ url = input("Enter the url to be tested: ")
 
 test_menu = get_menusII(url)
 test_menu = remove_english(str(test_menu), cooking_vocabulary)
-menu = set_menu(test_menu)
+menu = set_menu_user(test_menu)
 
 # check the menu
 result, errs = checker(words_freq.keys(), menu)
@@ -35,4 +37,9 @@ print("These are the errors:", errs)
 print("Result:", result)
 
 # get our score!
-scores = scoring(result, 1)
+score, img = scoring(result)
+
+plt.imshow(img)
+plt.show()
+input("Got it now? (Press any key): ")
+plt.close()

@@ -1,5 +1,4 @@
 import json
-from nltk.metrics import *
 from analysis.Indexes import *
 
 # import test menu
@@ -14,8 +13,6 @@ def background_corpus():
         Background_Corpora_Json = json.load(j)
     return Background_Corpora_Json
 
-
-#words_freq = tf(Background_Corpora_Json)
 
 # get tokens of each menu
 def get_tokens_test(corpus):
@@ -48,6 +45,11 @@ def set_menu(dict):
         set_tokens_test_sw[key] = set_menu
     return set_tokens_test_sw
 
+# user's menu
+def set_menu_user(Test_menu):
+    set_menu = set(get_tokens_stopw(Test_menu))
+    return set_menu
+
 
 # checker function
 def checker(background, test):
@@ -61,15 +63,4 @@ def checker(background, test):
             continue
     return count, errors
 
-
-# finally check them
-# final_results = {}
-# final_errors = {}
-# for key, value in set_tokens_test_sw.items():
-#     result, errs = checker(words_freq.keys(), value)
-#     final_results[key] = result
-#     final_errors[key] = errs
-
-
-#result, errs = checker(words_freq.keys(), set_menu)
 
