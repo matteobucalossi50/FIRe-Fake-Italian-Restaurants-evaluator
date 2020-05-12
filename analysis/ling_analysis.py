@@ -1,4 +1,7 @@
+import nltk
+from nltk import bigrams
 from nltk.metrics import *
+
 
 # edit distance
 def edit_dist(dic, corr_w):
@@ -39,6 +42,7 @@ for w in words_freq.keys():
 '''
 
 
+
 # grams frequencies
 freq_bi = nltk.FreqDist(bigrams)
 
@@ -55,18 +59,8 @@ print(freq_bi.freq(('pizza', 'napoletana')))
 #MLE_Dist = nltk.MLEProbDist(freq_bi)
 Smoothed_dist = nltk.LaplaceProbDist(freq_bi)
 
-print(Smoothed_dist.prob(('Chair', 'Force')))
-print(Smoothed_dist.logprob(('Chair', 'Force')) )
-
-'''
-def get_better_sentence_bigrams(sentence):
-    sentence_words = treebank_tokenizer.tokenize(sentence)
-    stop_words = nltk.corpus.stopwords.words('english')
-    content = [w for w in sentence_words if w.lower() not in stop_words]
-    word_count = len(sentence_words)
-    bigrams = nltk.bigrams(content)
-    return bigrams, word_count
-    '''
+print(Smoothed_dist.prob(('pizza', 'napoletana')))
+print(Smoothed_dist.logprob(('pizza', 'napoletana')) )
 
 
 def estimate_sentence_probability(ngrams, word_count):

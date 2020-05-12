@@ -28,8 +28,6 @@ def get_tokens(text):
     all_tokens = [word.lower() for word in all_tokens if word.isalpha()]
     all_tokens = [word for word in all_tokens if word != 'g']
 
-    #     stop_words = nltk.corpus.stopwords.words('italian')
-    #     all_tokens = [w for w in all_tokens if w not in stop_words]
     return all_tokens
 
 
@@ -90,6 +88,21 @@ def ngrams_it(corpus):
 
     return all_ngrams
 
+
+def ngrams_it_stopw(corpus):
+    all_ngrams = []
+    # get all ngrams
+    for key, value in corpus.items():
+        # print(doc)
+        tokens = get_tokens(value)
+        res = trigram(tokens)
+        # res = ngrams(tokens, 2)
+        for gram in res:
+            all_ngrams.append(gram)
+
+    return all_ngrams
+
+
 def freq_grams(grams):
     freq_grams = {}
     for gram in grams:
@@ -98,7 +111,7 @@ def freq_grams(grams):
         else:
             freq_grams[gram] += 1
 
-    # words_freq = sorted(words_freq.items(), key=lambda x:x[1], reverse=True)
+    # freq_grams = sorted(freq_grams.items(), key=lambda x:x[1], reverse=True)
     return freq_grams
 
 
@@ -114,6 +127,7 @@ def tf(corpus):
 
     # words_freq = sorted(words_freq.items(), key=lambda x:x[1], reverse=True)
     return words_freq
+
 
 def tf_doc(corpus):
     doc_terms = {}
