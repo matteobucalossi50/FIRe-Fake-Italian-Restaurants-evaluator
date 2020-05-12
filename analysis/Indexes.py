@@ -21,6 +21,7 @@ with open('./data/Background Corpora.json', 'r') as j:
     Background_Corpora_Json = json.load(j)
 
 
+# tokenizer including stopwords
 def get_tokens(text):
     punkt_sentences = sentence_tokenizer.tokenize(text)
     sentences_words = [treebank_tokenizer.tokenize(sentence) for sentence in punkt_sentences]
@@ -31,6 +32,7 @@ def get_tokens(text):
     return all_tokens
 
 
+# token excluding stop words
 def get_tokens_stopw(text):
     punkt_sentences = sentence_tokenizer.tokenize(text)
     sentences_words = [treebank_tokenizer.tokenize(sentence) for sentence in punkt_sentences]
@@ -43,6 +45,7 @@ def get_tokens_stopw(text):
     return all_tokens
 
 
+# create trigrams with stop words
 def trigram(sentence):
     # create a list for the result
     result = list()
@@ -63,6 +66,7 @@ def trigram(sentence):
     return result
 
 
+# bigrams with spacy
 def bigram_spacy(corpus, nlp):
     # trying with spacy by sentence
     res = []
@@ -75,6 +79,7 @@ def bigram_spacy(corpus, nlp):
     return res
 
 
+# get all trigrams
 def ngrams_it(corpus):
     all_ngrams = []
     # get all ngrams
@@ -89,6 +94,7 @@ def ngrams_it(corpus):
     return all_ngrams
 
 
+# get all trigrams without stopwords
 def ngrams_it_stopw(corpus):
     all_ngrams = []
     # get all ngrams
@@ -103,6 +109,7 @@ def ngrams_it_stopw(corpus):
     return all_ngrams
 
 
+# frequency of each gram
 def freq_grams(grams):
     freq_grams = {}
     for gram in grams:
@@ -115,6 +122,7 @@ def freq_grams(grams):
     return freq_grams
 
 
+# TF matrix
 def tf(corpus):
     words_freq = {}
     for key, value in corpus.items():
@@ -129,6 +137,7 @@ def tf(corpus):
     return words_freq
 
 
+# TF matrices per each menu
 def tf_doc(corpus):
     doc_terms = {}
     for key, value in corpus.items():
@@ -143,9 +152,10 @@ def tf_doc(corpus):
 
     return doc_terms
 
+
+# list of all corpus tokens
 def get_alltokens(corpus):
     all_tokens = []
-
     for key, value in corpus.items():
         tokens = get_tokens_stopw(value)
         for tok in tokens:
@@ -156,6 +166,7 @@ def get_alltokens(corpus):
     return all_tokens
 
 
+# Inverted Index matrix
 def inv_index(corpus, all_tokens):
     term_docs = {}
     for tok in all_tokens:
@@ -171,6 +182,7 @@ def inv_index(corpus, all_tokens):
     return term_docs
 
 
+# matrix of grams per each token
 def term_grams(all_tokens, all_ngrams):
     grams_dic = {}
 
@@ -185,6 +197,7 @@ def term_grams(all_tokens, all_ngrams):
     return grams_dic
 
 
+# matrix of grams in each doc per token
 def term_doc_grams(all_tokens, corpus, all_ngrams):  # n^3 v slow
     dic = {}
     for tok in all_tokens:

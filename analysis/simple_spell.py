@@ -45,6 +45,7 @@ def set_menu(dict):
         set_tokens_test_sw[key] = set_menu
     return set_tokens_test_sw
 
+
 # user's menu
 def set_menu_user(Test_menu):
     set_menu = set(get_tokens_stopw(Test_menu))
