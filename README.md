@@ -1,3 +1,22 @@
-*we'll update here soon*
-# FIRe-Fake-Italian-Restaurants-evaluator
-Application of multilingual NLP techniques to evaluate authenticity of Italian restaurants based in the U.S.
+# FIRe: Fake Italian Restaurants evaluator
+FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants based in the U.S. by assessing their menus' use of Italian
+
+---
+## Setup & Usage
+- To use FIRe clone this repo on your locat machine using `https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator`
+- Set your directory in terminal
+```shell
+$ cd ./FIRe-Fake-Italian-Restaurants-evaluator
+```
+- You will then use [`fire.py`](https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator/blob/master/fire.py) to run FIRe
+```shell
+$ python fire.py
+```
+Please provide URLs exclusively from [opentable.com](opentable.com) when asked to
+
+---
+## Example
+You can also preview an example of FIRe at work on a test sample of few menus in the [`FIRe-example.ipynb`](https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator/blob/master/FIRe-example.ipynb) notebook
+
+Here's a table for the results from said sample
+
