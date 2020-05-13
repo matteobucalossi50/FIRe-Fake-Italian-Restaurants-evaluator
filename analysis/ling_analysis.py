@@ -48,12 +48,8 @@ freq_bi = nltk.FreqDist(bigrams)
 
 print(freq_bi.most_common(20))
 freq_bi.plot(10)
-
-
-'''
 print(freq_bi.N())
-print(freq_bi.freq(('pizza', 'napoletana')))
-'''
+
 
 
 #MLE_Dist = nltk.MLEProbDist(freq_bi)
