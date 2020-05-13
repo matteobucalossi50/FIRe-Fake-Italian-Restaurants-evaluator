@@ -20,7 +20,7 @@ def scoring(result):
         img = mpimg.imread('images/nonna-open.jpg')
     elif result >= 6 and result <= 10:
         scores = 4
-        img = mpimg.imread('images/Red-Sauce-Raos.jpg')
+        img = mpimg.imread('images/second_generation.jpg')
     elif result >= 11 and result <= 15:
         scores = 3
         img = mpimg.imread('images/rosie-s-italian-grille.jpg')
