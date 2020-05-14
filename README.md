@@ -1,5 +1,5 @@
 # FIRe: Fake Italian Restaurants evaluator
-FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants based in the U.S. by using a unique corpus of Italian domain-specific tokens
+FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants based in the U.S. with a unique Italian *culinary* corpus
 
 ---
 ## Setup & Usage
