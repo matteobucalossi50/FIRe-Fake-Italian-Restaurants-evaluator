@@ -16,21 +16,26 @@ p.kill()
 # label scores
 def scoring(result):
     if result <= 5:
-        scores = 5
+        score = 5
         img = mpimg.imread('images/nonna-open.jpg')
+        image = r'images/nonna-open.jpg'
     elif result >= 6 and result <= 10:
-        scores = 4
+        score = 4
         img = mpimg.imread('images/second_generation.jpg')
+        image = r'images/second_generation.jpg'
     elif result >= 11 and result <= 15:
-        scores = 3
+        score = 3
         img = mpimg.imread('images/rosie-s-italian-grille.jpg')
+        image = r'images/rosie-s-italian-grille.jpg'
     elif result >= 16 and result <= 20:
-        scores = 2
+        score = 2
         img = mpimg.imread('images/olive_garden.jpg')
+        image = r'images/olive_garden.jpg'
     else:
-        scores = 1
+        score = 1
         img = mpimg.imread('images/pizza_deep.jpg')
+        image = r'images/pizza_deep.jpg'
 
-    return scores, img
+    return score, img, image
 
 

@@ -37,7 +37,7 @@ print("These are the errors:", errs)
 print("Result:", result)
 
 # get our score!
-score, img = scoring(result)
+score, img, image = scoring(result)
 
 plt.imshow(img)
 plt.show()
