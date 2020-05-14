@@ -14,7 +14,7 @@ $ python fire.py
 ```
 Please provide URLs exclusively from [opentable.com](opentable.com) when asked to
 
-Feed FIRe different Italian restaurant and see for yourself how "Italian" they are!
+Feed FIRe different Italian restaurants and see for yourself how "Italian" they are!
 
 ---
 ## Example
