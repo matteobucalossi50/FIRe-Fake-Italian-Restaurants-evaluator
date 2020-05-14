@@ -3,7 +3,7 @@ FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants
 
 ---
 ## Setup & Usage
-- To use FIRe clone this repo on your local machine using `https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator`
+- Clone this repo on your local machine using `https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator`
 - Set your directory in terminal
 ```shell
 $ cd ./FIRe-Fake-Italian-Restaurants-evaluator
