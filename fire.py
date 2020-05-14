@@ -34,7 +34,7 @@ menu = set_menu_user(test_menu)
 # check the menu
 result, errs = checker(words_freq.keys(), menu)
 print("These are the errors:", errs)
-print("Result:", result)
+print("Detected errors:", result)
 
 # get our score!
 score, img, image = scoring(result)
