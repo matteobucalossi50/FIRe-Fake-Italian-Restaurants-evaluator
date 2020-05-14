@@ -14,6 +14,8 @@ $ python fire.py
 ```
 Please provide URLs exclusively from [opentable.com](opentable.com) when asked to
 
+Feed FIRe different Italian restaurant and see for yourself how "Italian" they are!
+
 ---
 ## Example
 You can also preview an example of FIRe at work on a test sample of few menus in the [`FIRe-example.ipynb`](https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator/blob/master/FIRe-example.ipynb) notebook
