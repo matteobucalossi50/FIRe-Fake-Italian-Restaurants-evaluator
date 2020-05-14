@@ -1,5 +1,5 @@
 # FIRe: Fake Italian Restaurants evaluator
-FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants based in the U.S. with a unique Italian *culinary* corpus
+FIRe helps non-Italian speakers evaluate the authenticity of Italian restaurants in the U.S. with a unique Italian *culinary* corpus
 
 ## Setup & Usage
 - Clone this repo on your local machine using `https://github.com/matteobucalossi50/FIRe-Fake-Italian-Restaurants-evaluator`
